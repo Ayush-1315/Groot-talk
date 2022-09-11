@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Yatra One', cursive;
+}
+:root{
+    /* --background:red; */
+    --nav-brand-color:white;
+    --nav-color:#7c2d12;
+    --in-out:white;
+    --input-output:2rem;
+}
+/* Container */
+#container{
+    background-color: var(--background);
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* Navigation */
+#nav{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    grid-area: nav;
+    background-color: var(--nav-color);
+    z-index: 2;
+}
+#nav-brand{
+    /* border:2px solid black; */
+    margin:0 1rem;
+    padding:0.5rem 1rem;
+    font-size: 1.8rem;
+    color:var(--nav-brand-color);
+    text-shadow: 2px 2px black;
+}
+/* Content */
+#content{
+    height:75%;
+    width:100%;
+    display: flex;
+    padding: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+#container::before{
+    content: "";
+    background: url('images/groot-back.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-size: 50rem; */
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity: 0.75;
+}
+#userInput{
+height:45vh;
+width:48vw;
+resize: none;
+padding: 1rem;
+z-index: 1;
+border:2px solid black;
+border-radius: 0.2rem;
+background-color: transparent;
+font-size: var(--input-output);
+color:var(--in-out);
+}
+#groot-speak{
+    height:45vh;
+    padding: 1rem;
+    width:48vw;
+    border:2px solid black;
+    border-radius: 0.2rem;
+    /* background-color: white; */
+    font-size: var(--input-output);
+    z-index: 1;
+    color:var(--in-out);
+}
+/* Footer */
+#footer{
+    height:fit-content;
+    width:100%;
+    /* background-color: blue; */
+    z-index: 1;
+}
+#convert-btn{
+    display:inline-block;
+    height: 5rem;
+    width:4.5rem;
+    padding:0.5rem;
+    /* border-radius: 1.5rem; */
+    position: absolute;
+    top:25%;
+    border-radius: 50%;
+    left:46%;
+    cursor: pointer;
+    z-index: 2;
+    background-color: var(--nav-color);
+}
+#convert-btn:hover{
+    filter:drop-shadow(2px 2px 5px rgb(173, 172, 172));
+}
+.center{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.center>h1{
+    color:palegreen;
+    text-shadow: 2px 2px grey;
+}
+.center>p{
+    width:50%;
+}
+#groot{
+    height:3.5rem;
+}
